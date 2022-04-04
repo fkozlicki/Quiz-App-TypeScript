@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import QuestionCard from "./components/QuestionCard";
 import { fetchQuizQuestions, Difficulty, QuestionState } from "./API";
+import "./styles/main.scss";
 
 export type AnswerObject = {
 	question: string;
@@ -65,7 +66,7 @@ const App = () => {
 	};
 
 	return (
-		<div className="App">
+		<div className="app">
 			<h1>React Quiz</h1>
 			{(gameOver || userAnswers.length === TOTAL_QUESTIONS) && (
 				<button className="start" onClick={startTrivia}>
